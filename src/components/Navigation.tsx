@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import logo from '../assets/logo.jpeg'; // adjust path if needed
+import logo from '../assets/logo.jpeg';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ export default function Navigation() {
 
           {/* Logo + Brand */}
           <a href="/" className="flex items-center gap-3">
-            <div className="w-17 h-18 bg-gradient-to-br rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-17 h-18 rounded-lg flex items-center justify-center overflow-hidden">
               <img
                 src={logo}
                 alt="Regenesis Green Energy Logo"
@@ -44,17 +44,21 @@ export default function Navigation() {
               Projects
             </a>
             <a
-              href="#about"
+              href="/#about"
               className="text-gray-700 hover:text-green-600 font-medium transition"
             >
               About
             </a>
-            <a
-              href="/admin"
-              className="px-6 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
-            >
-              Admin
-            </a>
+
+            {/* ADMIN – ONLY VISIBLE IN DEVELOPMENT */}
+            {import.meta.env.DEV && (
+              <a
+                href="/admin"
+                className="px-6 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition"
+              >
+                Admin
+              </a>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,11 +66,7 @@ export default function Navigation() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-lg"
           >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -78,27 +78,35 @@ export default function Navigation() {
             <a
               href="/"
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </a>
             <a
               href="/projects"
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium"
+              onClick={() => setMobileMenuOpen(false)}
             >
               Projects
             </a>
             <a
-              href="#about"
+              href="/#about"
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium"
+              onClick={() => setMobileMenuOpen(false)}
             >
               About
             </a>
-            <a
-              href="/admin"
-              className="block px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 text-center"
-            >
-              Admin
-            </a>
+
+            {/* ADMIN – ONLY VISIBLE IN DEVELOPMENT */}
+            {import.meta.env.DEV && (
+              <a
+                href="/admin"
+                className="block px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Admin
+              </a>
+            )}
           </div>
         </div>
       )}
