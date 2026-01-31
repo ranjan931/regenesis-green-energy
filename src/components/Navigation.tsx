@@ -38,7 +38,7 @@ export default function Navigation() {
               Home
             </a>
             <a
-              href="/projects"
+              href="/#projects"
               className="text-gray-700 hover:text-green-600 font-medium transition"
             >
               Projects
@@ -83,7 +83,7 @@ export default function Navigation() {
               Home
             </a>
             <a
-              href="/projects"
+              href="/#projects"
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
