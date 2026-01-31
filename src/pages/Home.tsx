@@ -232,30 +232,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STRATEGIC ASSOCIATIONS */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10">
-            Strategic Associations
-          </h2>
+     {/* STRATEGIC ASSOCIATIONS */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 text-center">
+    <h2 className="text-3xl font-bold text-gray-900 mb-10">
+      Strategic Associations
+    </h2>
 
-          <div className="flex flex-wrap justify-center items-center gap-12">
-            {[partner1, partner2, partner3].map((logo, i) => (
-              <div
-                key={i}
-                className="bg-white border border-gray-200 rounded-xl p-6
-                           shadow-sm hover:shadow-md transition"
-              >
-                <img
-                  src={logo}
-                  alt={`Strategic Partner ${i + 1}`}
-                  className="h-16 object-contain grayscale hover:grayscale-0 transition"
-                />
-              </div>
-            ))}
-          </div>
+    <div className="flex flex-wrap justify-center items-center gap-12">
+      {[partner1, partner2, partner3].map((logo, i) => (
+        <div
+          key={i}
+          className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"
+        >
+          <img
+            src={logo}
+            alt={`Strategic Partner ${i + 1}`}
+            className="h-16 object-contain"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
     </div>
   );

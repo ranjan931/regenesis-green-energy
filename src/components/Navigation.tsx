@@ -12,11 +12,11 @@ export default function Navigation() {
 
           {/* Logo + Brand */}
           <a href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-17 h-18 bg-gradient-to-br rounded-lg flex items-center justify-center overflow-hidden">
               <img
                 src={logo}
                 alt="Regenesis Green Energy Logo"
-                className="w-9 h-9 object-contain"
+                className="w-12 h-16 object-contain"
               />
             </div>
             <div>

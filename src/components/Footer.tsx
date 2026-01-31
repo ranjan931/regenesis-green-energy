@@ -10,12 +10,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center overflow-hidden">
-                <img
-                  src={logo}
-                  alt="Regenesis Green Energy Logo"
-                  className="w-9 h-9 object-contain"
-                />
+              <div className="w-28 h-28 bg-gradient-to-br rounded-2xl flex items-center justify-center overflow-hidden shadow-md">
+  <img
+    src={logo}
+    alt="Company Logo"
+    className="w-20 h-20 object-contain"
+  />
+</div>
+
               </div>
               <div>
                 <div className="text-xl font-bold text-green-700">
@@ -24,7 +26,7 @@ export default function Footer() {
                 <div className="text-xs font-semibold text-yellow-600 tracking-wide">
                   Clean Power Solutions
                 </div>
-              </div>
+              
             </div>
 
             <p className="text-gray-400 mb-6 max-w-md">
@@ -53,7 +55,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/admin" className="hover:text-green-500 transition">
+                <a href="/admin" className="hover:text-whit-500 transition">
                   Admin
                 </a>
               </li>
