@@ -9,6 +9,7 @@ import legalAdvisor from '../assets/l1.png';
 import partner1 from '../assets/b1.png';
 import partner2 from '../assets/b2.png';
 import partner3 from '../assets/b3.png';
+import partner4 from '../assets/l5.jpeg';
 
 export default function Home() {
   const [heroContent, setHeroContent] = useState<SiteContent | null>(null);
@@ -60,7 +61,7 @@ export default function Home() {
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             {heroContent?.content ||
-              'Leading the renewable energy revolution with innovative solar solutions'}
+              'Leading the renewable energy revolution with innovative solar solutions.'}
           </p>
           <a
             href="#projects"
@@ -240,7 +241,7 @@ export default function Home() {
     </h2>
 
     <div className="flex flex-wrap justify-center items-center gap-12">
-      {[partner1, partner2, partner3].map((logo, i) => (
+      {[partner1, partner2, partner3, partner4].map((logo, i) => (
         <div
           key={i}
           className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"

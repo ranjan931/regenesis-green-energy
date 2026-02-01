@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/logo2.jpeg';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ export default function Navigation() {
               <img
                 src={logo}
                 alt="Regenesis Green Energy Logo"
-                className="w-12 h-16 object-contain"
+                className="w-16 h-17 object-contain"
               />
             </div>
             <div>

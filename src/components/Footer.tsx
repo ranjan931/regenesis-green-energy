@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
-import logo from '../assets/logo.jpeg'; // adjust path if needed
+import logo from '../assets/logo2.jpeg'; // adjust path if needed
 
 export default function Footer() {
   return (
@@ -68,7 +68,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-green-500" />
-                <span className="text-sm">regenesisgreenenerg.com</span>
+                <span className="text-sm">regenesis.greenco@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-green-500" />
@@ -78,7 +78,7 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-green-500 mt-1" />
                 <span className="text-sm">
-                  Bangalore, Karnataka, India 560001
+                  #2112 , 3rd Floor, 9th Main, 'D' Block, Sahakaranagar, Bengaluru-560092, Karnataka, India 
                 </span>
               </li>
             </ul>
