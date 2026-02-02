@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
-import logo from '../assets/logo2.jpeg'; // adjust path if needed
+import logo from '../assets/logo3.png'; // adjust path if needed
 
 export default function Footer() {
   return (

@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 import founder from '../assets/f1.png';
 import founder2 from '../assets/f2.png';
+import seniorLeader from '../assets/s11.png';
 import legalAdvisor from '../assets/l1.png';
 
 import partner1 from '../assets/b1.png';
@@ -23,9 +24,9 @@ export default function Home() {
 
   const fetchContent = async () => {
     const { data } = await supabase.from<SiteContent>('site_content').select('*');
-    if (data && Array.isArray(data)) {
-      setHeroContent(data.find((c) => c.section === 'hero') || null);
-      setAboutContent(data.find((c) => c.section === 'about') || null);
+    if (Array.isArray(data)) {
+      setHeroContent(data.find(c => c.section === 'hero') || null);
+      setAboutContent(data.find(c => c.section === 'about') || null);
     }
   };
 
@@ -35,7 +36,7 @@ export default function Home() {
       .select('*')
       .eq('featured', true)
       .order('order_index', { ascending: true })
-      .limit(5);
+      .limit(6);
 
     if (data) setFeaturedProjects(data);
   };
@@ -43,7 +44,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
 
-      {/* HERO */}
+      {/* ================= HERO ================= */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -72,33 +73,80 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-4xl font-bold text-green-600">26+ MW</div>
-            <div className="font-semibold text-black">Total Installed Capacity</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-green-600">5+</div>
-            <div className="font-semibold text-black">Projects Completed</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-green-600">70k+</div>
-            <div className="font-semibold text-black">CO₂ Emissions Reduced</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-green-600">100+ MW</div>
-            <div className="font-semibold text-black">Renewable Portfolio by 2028</div>
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
+      {/* ================= ABOUT ================= */}
       <section id="about" className="py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 space-y-24">
 
-          {/* Company Overview */}
+          {/* ================= STATS ================= */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-green-600">26+ MW</div>
+              <div className="font-semibold text-black">Total Installed Capacity</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-green-600">5+</div>
+              <div className="font-semibold text-black">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-green-600">37k+</div>
+              <div className="font-semibold text-black">CO₂ Emissions Reduced</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-green-600">100+ MW</div>
+              <div className="font-semibold text-black">Renewable Portfolio by 2026</div>
+            </div>
+          </div>
+
+          {/* ================= EPC METHODOLOGY ================= */}
+          <div className="bg-white rounded-3xl p-14 shadow-sm space-y-14">
+
+            {/* CENTERED TITLE */}
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Our Project Development Methodology
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                A structured, compliant, and execution-driven approach to delivering
+                reliable and sustainable solar power infrastructure.
+              </p>
+            </div>
+
+            {/* IMAGE + STEPS */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+
+              <img
+                src="https://images.pexels.com/photos/19205947/pexels-photo-19205947.jpeg"
+                alt="EPC Solar Power Infrastructure"
+                className="w-full h-[460px] object-cover rounded-2xl shadow-md"
+              />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  'Site Survey',
+                  'Mounting Structures',
+                  'Inverter Integration',
+                  'Grid Commissioning',
+                  'Civil Works & MCR Building',
+                  'Earthing & Cabling',
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-4 bg-blue-50 border border-blue-100
+                               rounded-xl px-6 py-5 hover:shadow-md transition"
+                  >
+                    <div className="w-10 h-10 flex items-center justify-center
+                                    rounded-full bg-green-600 text-white font-bold">
+                      {i + 1}
+                    </div>
+                    <span className="text-gray-800 font-semibold">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+
+          {/* ================= COMPANY OVERVIEW ================= */}
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-6 text-gray-900">
               Company Overview
@@ -109,48 +157,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* CORPORATE HIGHLIGHTS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              {
-                title: 'Experience',
-                value: '40+ Years',
-                desc: 'Proven leadership in transmission, distribution, and renewable energy infrastructure.',
-              },
-              {
-                title: 'Core Focus',
-                value: 'Renewable Energy',
-                desc: 'Solar power generation, open access power sale, and clean energy solutions.',
-              },
-              {
-                title: 'Operations',
-                value: 'Multi-State',
-                desc: 'Strong coordination with state utilities and regulatory authorities.',
-              },
-              {
-                title: 'Vision',
-                value: 'Sustainable Growth',
-                desc: 'Building long-term value through compliant, scalable clean energy projects.',
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-gray-100 border border-gray-200 rounded-xl p-6
-                           hover:shadow-lg hover:-translate-y-1 transition"
-              >
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-xs uppercase font-semibold text-yellow-600">
-                    {item.title}
-                  </span>
-                  <span className="text-yellow-500">◆</span>
-                </div>
-                <div className="text-2xl font-bold text-gray-900">{item.value}</div>
-                <p className="text-gray-600 text-sm mt-3">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* LEADERSHIP */}
+          {/* ================= LEADERSHIP ================= */}
           {[
             {
               img: founder,
@@ -167,6 +174,14 @@ export default function Home() {
               exp: 'Retd. APTRANSCO | 38 Years Experience',
               desc:
                 'Retired APTRANSCO officer with deep expertise in project administration, open access power sale, and state utility coordination.',
+            },
+            {
+              img: seniorLeader,
+              role: 'Senior Leadership',
+              name: 'Sanjay Kottari',
+              exp: 'Experience | Core Expertise',
+              desc:
+                'Senior leader with proven expertise in digital transformation and automation, aligning policy objectives with operational efficiency to accelerate the energy transition.',
             },
             {
               img: legalAdvisor,
@@ -208,55 +223,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SUSTAINABLE GROWTH PLAN */}
+      {/* ================= SUSTAINABLE GROWTH PLAN ================= */}
       <section id="projects" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">
             Sustainable Growth Plan
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {featuredProjects.map((project) => (
-              <div key={project.id} className="rounded-xl shadow-lg overflow-hidden">
-                <img src={project.image_url} className="h-64 w-full object-cover" />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-3">{project.description}</p>
-                  <div className="flex justify-between text-sm text-gray-500">
-                    <span>{project.location}</span>
-                    <span>{project.capacity}</span>
+          {featuredProjects.length === 0 ? (
+            <p className="text-center text-gray-500">
+              Projects will be updated soon.
+            </p>
+          ) : (
+            <div className="grid md:grid-cols-3 gap-8">
+              {featuredProjects.map(project => (
+                <div key={project.id} className="rounded-xl shadow-lg overflow-hidden">
+                  <img src={project.image_url} className="h-64 w-full object-cover" />
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                    <p className="text-gray-600 mb-3">{project.description}</p>
+                    <div className="flex justify-between text-sm text-gray-500">
+                      <span>{project.location}</span>
+                      <span>{project.capacity}</span>
+                    </div>
                   </div>
                 </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* ================= STRATEGIC ASSOCIATIONS ================= */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
+            Strategic Associations
+          </h2>
+
+          <div className="flex flex-wrap justify-center items-center gap-12">
+            {[partner1, partner2, partner3, partner4].map((logo, i) => (
+              <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <img
+                  src={logo}
+                  alt={`Strategic Partner ${i + 1}`}
+                  className="h-16 object-contain"
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
-
-     {/* STRATEGIC ASSOCIATIONS */}
-<section className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 text-center">
-    <h2 className="text-3xl font-bold text-gray-900 mb-10">
-      Strategic Associations
-    </h2>
-
-    <div className="flex flex-wrap justify-center items-center gap-12">
-      {[partner1, partner2, partner3, partner4].map((logo, i) => (
-        <div
-          key={i}
-          className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"
-        >
-          <img
-            src={logo}
-            alt={`Strategic Partner ${i + 1}`}
-            className="h-16 object-contain"
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
 
     </div>
   );

@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import logo from '../assets/logo2.jpeg';
+import logo from '../assets/logo3.png';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
