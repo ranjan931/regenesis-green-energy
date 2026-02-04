@@ -177,7 +177,7 @@ export default function Home() {
             },
             {
               img: seniorLeader,
-              role: 'Senior Leadership',
+              role: 'Senior Consultant',
               name: 'Sanjay Kottari',
               exp: 'Experience | Core Expertise',
               desc:
