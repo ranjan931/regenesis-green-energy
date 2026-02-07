@@ -262,7 +262,7 @@ export default function Home() {
           </h2>
 
           <div className="flex flex-wrap justify-center items-center gap-12">
-            {[partner1, partner2, partner3, partner4].map((logo, i) => (
+            {[partner1, partner2, partner3].map((logo, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                 <img
                   src={logo}
