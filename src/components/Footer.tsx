@@ -68,7 +68,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-green-500" />
-                <span className="text-sm">regenesis.greenco@gmail.com</span>
+                <span className="text-sm">sankara@regenesisgreenenergy.in</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-green-500" />
