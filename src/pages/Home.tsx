@@ -62,7 +62,7 @@ export default function Home() {
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             {heroContent?.content ||
-              'Leading the renewable energy revolution with innovative solar solutions.'}
+              'Leading the renewable green energy revolution with innovative solar solutions.'}
           </p>
           <a
             href="#projects"
