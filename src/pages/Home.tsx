@@ -80,7 +80,7 @@ export default function Home() {
           {/* ================= STATS ================= */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-green-600">24++ MW</div>
+              <div className="text-4xl font-bold text-green-600">36++ MW</div>
               <div className="font-semibold text-black">Total Installed Capacity</div>
             </div>
             <div>
