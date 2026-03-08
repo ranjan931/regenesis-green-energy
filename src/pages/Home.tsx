@@ -11,6 +11,7 @@ import partner1 from '../assets/b1.png';
 import partner2 from '../assets/b2.png';
 import partner3 from '../assets/b3.png';
 import partner4 from '../assets/l5.jpeg';
+import partner5 from '../assets/ram.png';
 
 export default function Home() {
   const [heroContent, setHeroContent] = useState<SiteContent | null>(null);
@@ -36,7 +37,7 @@ export default function Home() {
       .select('*')
       .eq('featured', true)
       .order('order_index', { ascending: true })
-      .limit(6);
+      .limit(7);
 
     if (data) setFeaturedProjects(data);
   };
@@ -262,7 +263,7 @@ export default function Home() {
           </h2>
 
           <div className="flex flex-wrap justify-center items-center gap-12">
-            {[partner1, partner2, partner3,partner4].map((logo, i) => (
+            {[partner1, partner2, partner3,partner4,partner5].map((logo, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                 <img
                   src={logo}
