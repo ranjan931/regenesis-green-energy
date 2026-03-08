@@ -268,7 +268,7 @@ export default function Home() {
                 <img
                   src={logo}
                   alt={`Strategic Partner ${i + 1}`}
-                  className="h-16 object-contain"
+                  className="h-16 w-40 object-contain mx-auto"
                 />
               </div>
             ))}
