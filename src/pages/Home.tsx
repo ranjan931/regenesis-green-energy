@@ -177,9 +177,9 @@ export default function Home() {
                 'Retired APTRANSCO officer with deep expertise in project administration, open access power sale, and state utility coordination.',
             },
             {
-              img: seniorLeader,
+              
               role: 'Senior Consultant',
-              name: 'Sanjay Kottari',
+              name: 'Sanjay Kumar',
               exp: 'Experience | Core Expertise',
               desc:
                 'Senior leader with proven expertise in digital transformation and automation, aligning policy objectives with operational efficiency to accelerate the energy transition.',
