@@ -189,7 +189,7 @@ export default function Home() {
               img: projectmanager,
               role: 'Procurement and Project Execution Manager',
               name: 'Jayarama M',
-              exp: '35+ years  | PGCI in Operations',
+              exp: '35+ years  | PGCI in Operations & Management',
               desc:
                 'B.E. in Mechanical Engineering, Diploma in Marketing, with 35 years of professional experience at PGCI in Operations, Maintenance, Contracts, and Procurement Management.',
             },
