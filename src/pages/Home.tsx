@@ -4,7 +4,6 @@ import { ArrowRight } from 'lucide-react';
 
 import founder from '../assets/f1.png';
 import founder2 from '../assets/f2.png';
-import seniorLeader from '../assets/s11.png';
 import legalAdvisor from '../assets/l1.png';
 
 import partner1 from '../assets/b1.png';
@@ -12,6 +11,7 @@ import partner2 from '../assets/b2.png';
 import partner3 from '../assets/b3.png';
 import partner4 from '../assets/l5.jpeg';
 import partner5 from '../assets/ram.png';
+import partner6 from '../assets/partner6.jpeg';
 
 export default function Home() {
   const [heroContent, setHeroContent] = useState<SiteContent | null>(null);
@@ -162,7 +162,7 @@ export default function Home() {
           {[
             {
               img: founder,
-              role: 'Managing Director',
+              role: 'Managing Partner',
               name: 'Sankara Raju Aduluri',
               exp: '40+ Years | Transmission & Distribution',
               desc:
@@ -183,6 +183,14 @@ export default function Home() {
               exp: 'Experience | Core Expertise',
               desc:
                 'Senior leader with proven expertise in digital transformation and automation, aligning policy objectives with operational efficiency to accelerate the energy transition.',
+            },
+             {
+              img: partner6
+              role: 'Procurement and Project Execution Manager',
+              name: 'Jayarama M',
+              exp: '35+ years  | PGCI in Operations',
+              desc:
+                'B.E. in Mechanical Engineering, Diploma in Marketing, with 35 years of professional experience at PGCI in Operations, Maintenance, Contracts, and Procurement Management.',
             },
             {
               img: legalAdvisor,
