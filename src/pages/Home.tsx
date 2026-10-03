@@ -185,7 +185,7 @@ export default function Home() {
                 'Senior leader with proven expertise in digital transformation and automation, aligning policy objectives with operational efficiency to accelerate the energy transition.',
             },
              {
-              img: partner6
+              img: partner6,
               role: 'Procurement and Project Execution Manager',
               name: 'Jayarama M',
               exp: '35+ years  | PGCI in Operations',
